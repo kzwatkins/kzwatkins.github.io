@@ -1,0 +1,192 @@
+/* Use padding instead of margin to push down everything. Match with the height below.*/
+
+body{
+    padding-top: 1em;
+    background-color: #fafafa;
+    /*font-family: font-family: sans-serif;*/
+    font-family: font-family: 'Shanti', 'Questrial', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  /*font-family: sans-serif;*/
+  font-family: 'Corben', 'Gruppo', cursive;
+  Text-shadow: 0.125rem 0.125rem 0.75rem rgba(24, 20, 109, 0.8);
+  font-weight: normal;
+}
+
+a:link  {color:rgba(24, 20, 109, 1);} /* unvisited link */
+a:visited {color:rgba(24, 20, 109, 0.8);} /* visited link */
+a:hover, a:focus {color:rgba(24, 20, 109, 0.6);} /* mouse over or select with keyboard*/
+a:active {color:rgba(24, 20, 109, 0.4);} /* selected link */
+
+img{
+  max-width: 100%; /* doesn't go beyond natural width */
+}
+
+header{
+  font-size: 1em;
+}
+
+@media (min-width: 44em) {
+  .column {
+    float: left;
+    width: 33.333%;
+    padding: 1em;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 90em;
+  width:95%;
+  padding:0.25em;
+
+}
+
+.nolist{
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav-class{
+  position: fixed;
+  float: left;
+  width: 100%;
+  height: 4em;
+  display: inline-block;
+  box-shadow: 0 0.5em 1em rgba(24, 20, 109, 0.2);
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: block;
+  background-color: #fafafa; /*rgba(250, 250, 250, 1);*/
+  /*box-sizing: border-box;*/
+  /*background: linear-gradient(rgba(24, 20, 109, 0), rgba(24, 20, 109, 0.6), rgba(24, 20, 109, 1));*/
+  -webkit-backdrop-filter: blur(0.5em);
+          backdrop-filter: blur(0.5em);
+}
+.nav-class::after{
+  clear: both;
+  display: block;
+}
+
+.nav-list{
+  float: right;
+  list-style: none;
+  padding: 1em;
+  margin: 0em auto;
+}
+
+.nav-item{
+  display:inline-block;
+  float:left;
+  padding: 0 1em;
+  color: black;
+}
+
+.nav-link{
+    /*transform: scale(1.25);*/
+    text-decoration: none;
+    padding:0 1rem;
+    transition-property: background-color, color; /* color is the foreground color */
+    transition-timing-function: cubic-bezier(.7,.13,.52,1.57), ease-in-out;
+    transition-duration: 0.5s;
+    transition-delay: 50ms, 50ms;
+}
+
+.nav-link:hover{
+  background-color: rgba(19, 31, 149,0.8);
+  color:white;
+}
+
+.brand{
+  float:left;
+  /*box-sizing: border-box;*/
+  background: url('../images/kzw_brand.png') no-repeat top center;
+  /*width: 5em;*/
+  height: 3.5em;
+  background-size: contain;
+  color:transparent;
+}
+
+.hero{
+  display: block;
+  background: linear-gradient(to right, rgba(24, 20, 109, 0), rgba(24, 20, 109, 0.6), rgba(24, 20, 109, 1)),
+      url('../images/binaryFuzzy.jpeg') no-repeat top center;
+  height: 22em;
+  color:white;
+  /*padding: 0 2em;*/
+  margin: 5em 0;
+  width: auto;
+  background-size: cover;
+  /*box-sizing: border-box;*/
+  /*display: block;*/
+}
+
+.hero h1{
+  font-size: 2em;
+}
+
+.centering{
+  float: right;
+  text-align: center;
+  display: block;
+}
+
+.avatar{
+  max-width: 9em;
+  border-radius: 25% 10%;
+  box-shadow: 0 1em 2em rgba(24, 20, 109, 0.6); /* 16px 32px*/
+}
+
+.main-content{
+  /*padding: 0.125em 0;*/
+  clear: both;
+  display: block;
+  text-align: center;
+}
+
+.main-content::after{
+  clear: both;
+}
+
+.col-section{
+  text-align: justify;
+}
+
+.social{
+  float: left;
+  position: relative;
+  bottom: 0;
+  left: auto;
+  width: 100%;
+  background-color: rgba(24, 20, 109, 1);
+  text-align: center;
+}
+
+.social-list{
+  display: block;
+  list-style: none;
+  text-decoration: none;
+}
+
+.social-item{
+  display: inline-block;
+  padding: 0 1em;
+  transform:skewY(-0.125em);
+  transition: transform 150ms ease-in-out;
+}
+
+.linkedin{
+  order: 1;
+}
+
+.github{
+  order: 2;
+}
+
+.codepen{
+  order: 3;
+}
