@@ -37,6 +37,37 @@ header{
   }
 }
 
+.menu-bar {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 3px 0;
+    display: block;
+    clear: both;
+    text-decoration: none;
+}
+
+#menuBtn{
+  float: right;
+  /*width: 35px;*/
+  height:30px;
+  background-color: #FAFAFA;
+  /*margin: 3px 0;*/
+
+margin-right: 2em;
+   /*list-style: none;
+   display: block;*/
+   text-decoration: none;
+
+    border: none;
+    color: transparent;
+}
+
+.menu-list{
+  float: right;
+  list-style: none;
+}
+
 .container{
   margin: 0 auto;
   max-width: 90em;
@@ -48,14 +79,6 @@ header{
 .nolist{
   text-decoration: none;
   list-style: none;
-}
-
-.menu-bar {
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-    float: right;
 }
 
 .nav-class{
@@ -146,7 +169,7 @@ header{
 .avatar{
   max-width: 9em;
   border-radius: 25% 10%;
-  box-shadow: 0 1em 2em rgba(24, 20, 109, 0.6); /* 16px 32px*/
+  box-shadow: 1em 1em 0.5em 0.5em rgba(24, 20, 109, 0); /* 16px 32px*/
 }
 
 .main-content{
