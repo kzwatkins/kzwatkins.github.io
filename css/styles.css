@@ -50,6 +50,14 @@ header{
   list-style: none;
 }
 
+.menu-bar {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    float: right;
+}
+
 .nav-class{
   position: fixed;
   float: left;
@@ -215,4 +223,17 @@ header{
 }
 .inner-box {
   fill: white;
+}
+
+.no-float{
+  clear: both;
+  display: block;
+}
+
+.brand-logo{
+  background: url('../images/kzw_brand.png') no-repeat top center;
+  box-sizing: 0 0 44px 44px;
+  width: 44px;
+  background-size: contain;
+  color:transparent;
 }
