@@ -172,11 +172,21 @@ header{
   text-decoration: none;
 }
 
+.social-logo{
+  height: 1em;
+  color: white;
+}
+
 .social-item{
   display: inline-block;
   padding: 0 1em;
+  fill: white;
+}
+
+.social-item::hover{
   transform:skewY(-0.125em);
   transition: transform 150ms ease-in-out;
+
 }
 
 .linkedin{
@@ -185,8 +195,24 @@ header{
 
 .github{
   order: 2;
+  box-sizing: 0 0 44px auto;
+  width: 44px; /* required to center */
+  height: auto;
+  color:white;
 }
 
 .codepen{
   order: 3;
+}
+
+.logo {
+  box-sizing: 0 0 44px 44px;
+  width: 44px; /* required to center */
+  height: 44px;
+}
+.outer-ring {
+  fill: white;
+}
+.inner-box {
+  fill: white;
 }
