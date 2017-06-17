@@ -10,20 +10,23 @@ $(document).ready(function(){
 
 });
 
-// https:// stackoverflow.com/questions/24259016/responsive-menu-show-and-hide-on-click
+// Adapted from https:// stackoverflow.com/questions/24259016/responsive-menu-show-and-hide-on-click
 var menu = function() {
   var menuVisible = false;
   $('#menuBtn').click(function() {
-    if (menuVisible) {
-      $('.menu-bar').css({'display':'none'});
-      menuVisible = false;
-      $('.nav-list').css({'display':'none'});
+
+    if (!menuVisible) {
+      $('.nav-list').css({'display':'block'});
+      $(this).hide();
+      menuVisible = true;
       return;
     }
-    $('.menu-bar').css({'display':'block'});
-    menuVisible = true;
-    $('.nav-list').css({'display':'block'});
+
+    $('.nav-list').css({'display':'none'});
+    $(this).show();
+    menuVisible = false;
   });
+
   $('.menu-bar').click(function() {
     $(this).css({'display':'none'});
     menuVisible = false;
