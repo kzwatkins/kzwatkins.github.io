@@ -52,16 +52,16 @@ var menu = function() {
   //   }
   // });
 
-  var showMenuX = function (){
-    $(#top-bar).animate({rotate: '-45deg'});//rotate(-45));
-    $(#mid-bar).hide();
-    $(#bottom-bar).animate({rotate: '45deg'});
+function showMenuX (){
+    $("#top-bar").animate({rotate: '-45deg'});//rotate(-45));
+    $("#mid-bar").hide();
+    $("#bottom-bar").animate({rotate: '45deg'});
   }
 
-  var showMenuOrg = function (){
-    $(#top-bar).animate({rotate: '45deg'});
-    $(#mid-bar).show();
-    $(#bottom-bar).animate({rotate: '-45deg'});
+function showMenuOrg(){
+    $("#top-bar").animate({rotate: '45deg'});
+    $("#mid-bar").show();
+    $("#bottom-bar").animate({rotate: '-45deg'});
   }
 
 }
