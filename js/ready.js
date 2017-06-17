@@ -34,20 +34,22 @@ function menu(menuVisible, isFirst) {
 function showMenuX (isFirst){
     $("#top-bar").css({transform: 'rotate(-45deg)'});
     $("#mid-bar").hide("fast");
+    // $("#bottom-bar").hide();
     if (isFirst) {
-      $("#bottom-bar").css({transform: 'translateY(-8px) rotate(45deg)'});
+      $("#bottom-bar").css({transform: 'rotate(45deg) translateY(-8px)'});
     } else{
-      $("#bottom-bar").css({transform: 'translateY(-8px) rotate(45deg)'});
+      $("#bottom-bar").css({transform: 'rotate(45deg) translateY(-8px)'});
     }
   }
 
 function showMenuOrg(isFirst){
     $("#top-bar").css({transform: 'rotate(0deg)'});
     $("#mid-bar").show("fast");
+    // $("#bottom-bar").hide();
     if (isFirst) {
       $("#bottom-bar").css({transform: 'translateY(8px) rotate(0deg)'});
     } else {
-      $("#bottom-bar").css({transform: 'translateY(8x) rotate(-45deg)'});
+      $("#bottom-bar").css({transform: 'translateY(8px) rotate(0deg)'});
     }
   }
 
