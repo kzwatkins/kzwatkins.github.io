@@ -20,29 +20,53 @@ var menu = function() {
   $('#menuBtn').click(function() {
     if (menuVisible) {
       $('.nav-list').css({'display':'none'});
-      $(this).show();
+      // $(this).show();
+      // $(#top-bar).rotate(-45);
+      // $(#mid-bar).hide();
+      // $(#bottom-bar).rotate(45);
+      showMenuOrg();
       menuVisible = false;
     }
     else{
       $('.nav-list').css({'display':'block'});
-      $(this).hide();
+      // $(this).hide();
+      // $(#top-bar).rotate(45);
+      // $(#mid-bar).show();
+      // $(#bottom-bar).rotate(-45);
+      showMenuX();
       menuVisible = true;
     }
   });
 
-  $('.nav-list').click(function() {
-    if (menuVisible) {
-      $(this).css({'display':'none'});
-      $('#menuBtn').show();
-      menuVisible = false;
-    } else{
-      $(this).css({'display':'block'});
-      $('#menuBtn').hide();
-      menuVisible = true;
-    }
-  });
+  // $('.nav-list').click(function() {
+  //   if (menuVisible) {
+  //     $(this).css({'display':'none'});
+  //     // $('#menuBtn').show();
+  //     showMenuX();
+  //     menuVisible = false;
+  //   } else{
+  //     $(this).css({'display':'block'});
+  //     // $('#menuBtn').hide();
+  //     showMenuOrg();
+  //     menuVisible = true;
+  //   }
+  // });
+
+  var showMenuX = function (){
+    $(#top-bar).rotate(-45);
+    $(#mid-bar).hide();
+    $(#bottom-bar).rotate(45);
+  }
+
+  var showMenuOrg = function (){
+    $(#top-bar).rotate(45);
+    $(#mid-bar).show();
+    $(#bottom-bar).rotate(-45);
+  }
 
 }
+
+
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
 // function openNav() {
