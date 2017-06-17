@@ -36,9 +36,9 @@ function showMenuX (isFirst){
     $("#mid-bar").hide("fast");
     // $("#bottom-bar").hide();
     if (isFirst) {
-      $("#bottom-bar").css({transform: 'rotate(45deg) translateY(-8px)'});
+      $("#bottom-bar").css({transform: 'translateY(-8px) rotate(45deg)'});
     } else{
-      $("#bottom-bar").css({transform: 'rotate(45deg) translateY(-8px)'});
+      $("#bottom-bar").css({transform: 'translateY(-8px) rotate(45deg)'});
     }
   }
 
@@ -47,9 +47,9 @@ function showMenuOrg(isFirst){
     $("#mid-bar").show("fast");
     // $("#bottom-bar").hide();
     if (isFirst) {
-      $("#bottom-bar").css({transform: 'translateY(8px) rotate(0deg)'});
+      $("#bottom-bar").css({transform: 'translateY(0px) rotate(0deg)'});
     } else {
-      $("#bottom-bar").css({transform: 'translateY(8px) rotate(0deg)'});
+      $("#bottom-bar").css({transform: 'translateY(0px) rotate(0deg)'});
     }
   }
 
