@@ -49,6 +49,9 @@ header{
 
 #menuBtn{
   float: right;
+  position: fixed;
+  right: 0;
+  top: 0;
   /*width: 35px;*/
   height:30px;
   background-color: #FAFAFA;
