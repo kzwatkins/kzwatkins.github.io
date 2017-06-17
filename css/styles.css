@@ -52,18 +52,14 @@ header{
   position: fixed;
   right: 0;
   top: 0;
-  /*width: 35px;*/
+  width: 35px;
   height:30px;
+  margin-right:10px;
   background-color: #FAFAFA;
-  /*margin: 3px 0;*/
-
-margin-right: 2em;
-   /*list-style: none;
-   display: block;*/
-   text-decoration: none;
-
-    border: none;
-    color: transparent;
+  /*margin-right: 2em;*/
+  text-decoration: none;
+  border: none;
+  color: transparent;
 }
 
 .menu-list{
@@ -110,7 +106,7 @@ margin-right: 2em;
   float: right;
   list-style: none;
   padding: 1em;
-  margin: 0em auto;
+  margin: 0em 35px;
   display: none;
 }
 

@@ -13,6 +13,7 @@ var menu = function() {
   var menuVisible = false;   // The menu is initially hiding.
 
   $('#menuBtn').click(function() {
+
     if (menuVisible) {
       console.log("The menu is visible");
       $('.nav-list').css({'display':'none'});
@@ -25,14 +26,14 @@ var menu = function() {
       $('.nav-list').css({'display':'block'});
       showMenuX();
       console.log("Show the x menu button");
-
       menuVisible = true;
     }
+
   });
 }
 
 function showMenuX (){
-    $("#top-bar").css({transform: '-45deg'});//rotate(-45));
+    $("#top-bar").css({transform: '-45deg'});
     $("#mid-bar").fadeOut();
     $("#bottom-bar").css({transform: '45deg'});
   }
