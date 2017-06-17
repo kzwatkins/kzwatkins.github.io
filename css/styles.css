@@ -45,16 +45,17 @@ header{
     display: block;
     clear: both;
     text-decoration: none;
+    rotation-point: 50% 50%;
 }
 
 #menuBtn{
   float: right;
   position: fixed;
-  right: 0;
+  right: 10px;
   top: 0;
   width: 35px;
   height:30px;
-  margin-right:10px;
+  /*margin-right:10px;*/
   background-color: #FAFAFA;
   /*margin-right: 2em;*/
   text-decoration: none;
