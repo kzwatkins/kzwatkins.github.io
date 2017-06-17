@@ -62,6 +62,7 @@ header{
   text-decoration: none;
   border: none;
   color: transparent;
+  outline:none;
 }
 
 .menu-list{
