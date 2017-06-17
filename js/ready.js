@@ -14,13 +14,18 @@ var menu = function() {
 
   $('#menuBtn').click(function() {
     if (menuVisible) {
+      console.log("The menu is visible");
       $('.nav-list').css({'display':'none'});
       showMenuOrg();
+      console.log("Show the original menu button.");
       menuVisible = false;
     }
     else{
+      console.log("The menu is invisible");
       $('.nav-list').css({'display':'block'});
       showMenuX();
+      console.log("Show the x menu button");
+
       menuVisible = true;
     }
   });
@@ -28,13 +33,13 @@ var menu = function() {
 
 function showMenuX (){
     $("#top-bar").css({transform: '-45deg'});//rotate(-45));
-    $("#mid-bar").hide();
+    $("#mid-bar").fadeOut();
     $("#bottom-bar").css({transform: '45deg'});
   }
 
 function showMenuOrg(){
     $("#top-bar").css({transform: '45deg'});
-    $("#mid-bar").show();
+    $("#mid-bar").fadeIn();
     $("#bottom-bar").css({transform: '-45deg'});
   }
 
