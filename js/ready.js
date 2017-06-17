@@ -1,15 +1,17 @@
 $(document).ready(function(){
   var menuVisible = false;
+  var isFirst = true;
     $("#menuBtn").click(function(){
         // $(menu);
-        menu(menuVisible);
+        menu(menuVisible, isFirst);
         menuVisible = !menuVisible;
+        isFirst = false;
     });
 
 });
 
 // Adapted from https:// stackoverflow.com/questions/24259016/responsive-menu-show-and-hide-on-click
-function menu(menuVisible) {
+function menu(menuVisible, isFirst) {
 
   // If the menu is hiding, then show it.
   // If the menu is showing, then hide it.
@@ -19,26 +21,34 @@ function menu(menuVisible) {
 
     if (menuVisible) {
       $('.nav-list').css({'display':'none'});
-      showMenuOrg();
+      showMenuOrg(isFirst);
     }
     else{
       $('.nav-list').css({'display':'block'});
-      showMenuX();
+      showMenuX(isFirst);
     }
 
   // });
 }
 
-function showMenuX (){
-    $("#top-bar").css({rotation: '-45deg'});
-    $("#mid-bar").hide("slow");
-    $("#bottom-bar").css({rotation: '45deg'});
+function showMenuX (isFirst){
+    $("#top-bar").css({transform: 'rotate(-45deg)'});
+    $("#mid-bar").hide("fast");
+    if (isFirst) {
+      $("#bottom-bar").css({transform: 'translateY(-8px) rotate(45deg)'});
+    } else{
+      $("#bottom-bar").css({transform: 'translateY(-8px) rotate(45deg)'});
+    }
   }
 
-function showMenuOrg(){
-    $("#top-bar").css({rotation: '45deg'});
-    $("#mid-bar").show("slow");
-    $("#bottom-bar").css({rotation: '-45deg'});
+function showMenuOrg(isFirst){
+    $("#top-bar").css({transform: 'rotate(0deg)'});
+    $("#mid-bar").show("fast");
+    if (isFirst) {
+      $("#bottom-bar").css({transform: 'translateY(8px) rotate(0deg)'});
+    } else {
+      $("#bottom-bar").css({transform: 'translateY(8x) rotate(-45deg)'});
+    }
   }
 
 

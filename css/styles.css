@@ -109,7 +109,7 @@ header{
   top: 35px;
   right: 10px;
   list-style: none;
-  padding: 0.5em;
+  padding: 0.25em;
   /*margin: 0em 35px;*/
   display: none;
   z-index: 20;
@@ -126,7 +126,7 @@ header{
 .nav-link{
     /*transform: scale(1.25);*/
     text-decoration: none;
-    padding:0 1rem;
+    /*padding:0 1rem;*/
     transition-property: background-color, color; /* color is the foreground color */
     transition-timing-function: cubic-bezier(.7,.13,.52,1.57), ease-in-out;
     transition-duration: 0.5s;
