@@ -53,15 +53,15 @@ var menu = function() {
   // });
 
   var showMenuX = function (){
-    $(#top-bar).rotate(-45);
+    $(#top-bar).animate({rotate: '-45deg'});//rotate(-45));
     $(#mid-bar).hide();
-    $(#bottom-bar).rotate(45);
+    $(#bottom-bar).animate({rotate: '45deg'});
   }
 
   var showMenuOrg = function (){
-    $(#top-bar).rotate(45);
+    $(#top-bar).animate({rotate: '45deg'});
     $(#mid-bar).show();
-    $(#bottom-bar).rotate(-45);
+    $(#bottom-bar).animate({rotate: '-45deg'});
   }
 
 }
