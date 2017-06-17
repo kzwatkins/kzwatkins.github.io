@@ -1,19 +1,21 @@
 $(document).ready(function(){
+  var menuVisible = false;
     $("#menuBtn").click(function(){
         // $(menu);
-        menu();
+        menu(menuVisible);
+        menuVisible = !menuVisible;
     });
 
 });
 
 // Adapted from https:// stackoverflow.com/questions/24259016/responsive-menu-show-and-hide-on-click
-function menu() {
+function menu(menuVisible) {
 
   // If the menu is hiding, then show it.
   // If the menu is showing, then hide it.
-  var menuVisible = false;   // The menu is initially hiding.
+  //  var menuVisible = false;   // The menu is initially hiding.
 
-  $('#menuBtn').click(function() {
+  // $('#menuBtn').click(function() {
 
     if (menuVisible) {
       $('.nav-list').css({'display':'none'});
@@ -24,8 +26,7 @@ function menu() {
       showMenuX();
     }
 
-    menuVisible = !menuVisible;
-  });
+  // });
 }
 
 function showMenuX (){
