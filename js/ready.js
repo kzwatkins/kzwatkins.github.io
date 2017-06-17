@@ -15,14 +15,16 @@ var menu = function() {
   var menuVisible = false;
   $('#menuBtn').click(function() {
     if (menuVisible) {
-      $('menu-bar').css({'display':'none'});
+      $('.menu-bar').css({'display':'none'});
       menuVisible = false;
+      $('.nav-list').css({'display':'none'});
       return;
     }
-    $('menu-bar').css({'display':'block'});
+    $('.menu-bar').css({'display':'block'});
     menuVisible = true;
+    $('.nav-list').css({'display':'block'});
   });
-  $('menu-bar').click(function() {
+  $('.menu-bar').click(function() {
     $(this).css({'display':'none'});
     menuVisible = false;
   });

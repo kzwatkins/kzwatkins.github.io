@@ -108,6 +108,7 @@ margin-right: 2em;
   list-style: none;
   padding: 1em;
   margin: 0em auto;
+  display: none;
 }
 
 .nav-item{
