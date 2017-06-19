@@ -167,7 +167,9 @@ header{
   height: 22em;
   color:white;
   /*padding: 0 2em;*/
-  margin: 5em 0;
+  /*margin: 5em 0;*/
+  margin-top: 4.5em;
+  margin-bottom: 1em;
   width: auto;
   background-size: cover;
   /*box-sizing: border-box;*/
