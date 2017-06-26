@@ -326,3 +326,39 @@ header{
   display: block;
   clear: both;
 }
+
+.workforyou1 {
+  height: 2em;
+  border-radius: 10px 10px 0 0;
+  width: auto;
+  background-image: linear-gradient(135deg, blue, red);
+  /*animation: workMeterBar 4s 150ms infinite linear alternate;*/
+}
+
+.workforyou2 {
+  height: 2em;
+  border-radius: 0 0 10px 10px;
+  width: auto;
+  background-image: linear-gradient(45deg, blue, red);
+  /*animation: workMeterBar 4s 150ms infinite linear alternate;*/
+}
+
+.workforyouindicator {
+  height: 2em;
+  width: 1em;
+  background-image: linear-gradient(45deg, blue, red);
+  /*animation: workMeterBar 4s 150ms infinite linear alternate;*/
+}
+
+
+@@keyframes workMeterBar {
+  0%{
+    border-radius: 50% 0 0 50%
+  }
+  50%{
+    border-radius: 50% 0 0 50%
+  }
+  100%{
+    border-radius: 50%
+  }
+}
