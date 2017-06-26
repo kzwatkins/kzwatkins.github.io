@@ -332,22 +332,8 @@ header{
   border-radius: 10px 10px 10px 10px;
   width: auto 80%;
   background-image: linear-gradient(to right, blue 15%, orange 50%, red 85%);
-  /*display: block;*/
-  /*position: absolute;*/
   top: 26.5em;
   z-index: 15;
-  /*float: left;*/
-  /*margin-top: 2em;
-  margin-left: 7em;*/
-  /*animation: workMeterBar 4s 150ms infinite linear alternate;*/
-}
-
-.work4u2 {
-  height: 2em;
-  border-radius: 0 0 10px 10px;
-  width: auto;
-  background-image: linear-gradient(45deg, blue, red);
-  /*animation: workMeterBar 4s 150ms infinite linear alternate;*/
 }
 
 .work4uindicator {
