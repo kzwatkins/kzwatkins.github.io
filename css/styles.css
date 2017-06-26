@@ -327,15 +327,22 @@ header{
   clear: both;
 }
 
-.workforyou1 {
-  height: 2em;
-  border-radius: 10px 10px 0 0;
-  width: auto;
-  background-image: linear-gradient(135deg, blue, red);
+.work4u {
+  height: 4em;
+  border-radius: 10px 10px 10px 10px;
+  width: auto 80%;
+  background-image: linear-gradient(to right, blue 15%, orange 50%, red 85%);
+  /*display: block;*/
+  /*position: absolute;*/
+  top: 26.5em;
+  z-index: 15;
+  /*float: left;*/
+  /*margin-top: 2em;
+  margin-left: 7em;*/
   /*animation: workMeterBar 4s 150ms infinite linear alternate;*/
 }
 
-.workforyou2 {
+.work4u2 {
   height: 2em;
   border-radius: 0 0 10px 10px;
   width: auto;
@@ -343,22 +350,22 @@ header{
   /*animation: workMeterBar 4s 150ms infinite linear alternate;*/
 }
 
-.workforyouindicator {
-  height: 2em;
-  width: 1em;
-  background-image: linear-gradient(45deg, blue, red);
-  /*animation: workMeterBar 4s 150ms infinite linear alternate;*/
+.work4uindicator {
+  background-color: brown;
+  height: 5em;
+  margin-top: -0.5em;
+  width: 2em;
+  display: inline;
+  float: left;
+  animation: workMeterBar 2s 75ms infinite linear alternate;
 }
 
 
-@@keyframes workMeterBar {
+@keyframes workMeterBar {
   0%{
-    border-radius: 50% 0 0 50%
-  }
-  50%{
-    border-radius: 50% 0 0 50%
+    transform: translate(0.5rem);
   }
   100%{
-    border-radius: 50%
+    transform: translate(82rem);
   }
 }
