@@ -1,0 +1,284 @@
+.work4u {
+  background-color: rgba(24, 20, 109, 0.4);
+  height: 4em;
+  border-radius: 10px 10px 10px 10px;
+  width: auto 80%;
+  top: 26.5em;
+  z-index: 15;
+}
+
+#work4uindicator {
+  background-color: blue;
+  position: relative;
+  height: 5em;
+  margin-top: -0.5em;
+  width: 8em;
+  /*display: inline;
+  float: left;*/
+  animation: workMeterBar 7s 150ms infinite linear alternate;
+}
+
+/*#work4uindicator:not(:hover){
+  content: "Click for Services!";
+}*/
+
+#work4uindicator:hover{
+  -webkit-animation-play-state : paused;
+  animation-play-state : paused;
+}
+
+@-webkit-keyframes workMeterBar {
+  0%{
+    transform: translateX(0vw);
+    color: orange;
+  }
+
+  5%{
+    background-image: linear-gradient(to right, blue 90%, orange 100%);
+    background-color: none;
+    color: green;
+  }
+
+  10%{
+    background-image: linear-gradient(to right, blue 80%, orange 100%);
+    background-color: none;
+    color: green;
+  }
+
+  15%{
+    background-image: linear-gradient(to right, blue 70%, orange 100%);
+    background-color: none;
+    color: green;
+  }
+
+  20%{
+    background-image: linear-gradient(to right, blue 60%, orange 100%);
+    background-color: none;
+    color: green;
+  }
+
+  25%{
+    background-image: linear-gradient(to right, blue 50%, orange 100%);
+    background-color: none;
+    color: green;
+  }
+
+  30%{
+    background-image: linear-gradient(to right, blue 40%, orange 100%);
+    background-color: none;
+    color: green;
+  }
+
+  35%{
+    background-image: linear-gradient(to right, blue 30%, orange 100%);
+    background-color: none;
+    color: green;
+  }
+
+  40%{
+    background-image: linear-gradient(to right, blue 20%, orange 100%);
+    background-color: none;
+    color: green;
+  }
+
+  45%{
+    background-image: linear-gradient(to right, blue 10%, orange 100%);
+    background-color: none;
+    color: green;
+  }
+
+  50%{
+    background-color: orange;
+    background-image: none;
+    color:black;
+  }
+
+  55%{
+    background-image: linear-gradient(to right, orange 90%, red 100%);
+    background-color: none;
+    color: green;
+  }
+
+  60%{
+    background-image: linear-gradient(to right, orange 80%, red 100%);
+    background-color: none;
+    color: green;
+  }
+
+  65%{
+    background-image: linear-gradient(to right, orange 70%, red 100%);
+    background-color: none;
+    color: green;
+  }
+
+  70%{
+    background-image: linear-gradient(to right, orange 60%, red 100%);
+    background-color: none;
+    color: green;
+  }
+
+  75%{
+    background-image: linear-gradient(to right, orange 50%, red 100%);
+    background-color: none;
+    color: green;
+  }
+
+  80%{
+    background-image: linear-gradient(to right, orange 40%, red 100%);
+    background-color: none;
+    color: green;
+  }
+
+  85%{
+    background-image: linear-gradient(to right, orange 30%, red 100%);
+    background-color: none;
+    color: green;
+  }
+
+  90%{
+    background-image: linear-gradient(to right, orange 20%, red 100%);
+    background-color: none;
+    color: green;
+  }
+
+  95%{
+    background-image: linear-gradient(to right, orange 10%, red 100%);
+    background-color: none;
+    color: green;
+  }
+
+  100%{
+    transform: translateX(95vw);
+    background-image: none;
+    background-color: red;
+    color: orange;
+  }
+}
+
+@keyframes workMeterBar {
+  0%{
+    transform: translateX(0vw);
+    color: orange;
+  }
+
+  5%{
+    background-image: linear-gradient(to right, blue 90%, orange 100%);
+    background-color: none;
+    color: white;
+  }
+
+  10%{
+    background-image: linear-gradient(to right, blue 80%, orange 100%);
+    background-color: none;
+    color: white;
+  }
+
+  15%{
+    background-image: linear-gradient(to right, blue 70%, orange 100%);
+    background-color: none;
+    color: white;
+  }
+
+  20%{
+    background-image: linear-gradient(to right, blue 60%, orange 100%);
+    background-color: none;
+    color: white;
+  }
+
+  25%{
+    background-image: linear-gradient(to right, blue 50%, orange 100%);
+    background-color: none;
+    color: white;
+  }
+
+  30%{
+    background-image: linear-gradient(to right, blue 40%, orange 100%);
+    background-color: none;
+    color: white;
+  }
+
+  35%{
+    background-image: linear-gradient(to right, blue 30%, orange 100%);
+    background-color: none;
+    color: white;
+  }
+
+  40%{
+    background-image: linear-gradient(to right, blue 20%, orange 100%);
+    background-color: none;
+    color: white;
+  }
+
+  45%{
+    background-image: linear-gradient(to right, blue 10%, orange 100%);
+    background-color: none;
+    color: white;
+  }
+
+  50%{
+    background-color: orange;
+    background-image: none;
+    color:red;
+  }
+
+  55%{
+    background-image: linear-gradient(to right, orange 90%, red 100%);
+    background-color: none;
+    color: white;
+  }
+
+  60%{
+    background-image: linear-gradient(to right, orange 80%, red 100%);
+    background-color: none;
+    color: white;
+  }
+
+  65%{
+    background-image: linear-gradient(to right, orange 70%, red 100%);
+    background-color: none;
+    color: white;
+  }
+
+  70%{
+    background-image: linear-gradient(to right, orange 60%, red 100%);
+    background-color: none;
+    color: white;
+  }
+
+  75%{
+    background-image: linear-gradient(to right, orange 50%, red 100%);
+    background-color: none;
+    color: white;
+  }
+
+  80%{
+    background-image: linear-gradient(to right, orange 40%, red 100%);
+    background-color: none;
+    color: white;
+  }
+
+  85%{
+    background-image: linear-gradient(to right, orange 30%, red 100%);
+    background-color: none;
+    color: white;
+  }
+
+  90%{
+    background-image: linear-gradient(to right, orange 20%, red 100%);
+    background-color: none;
+    color: white;
+  }
+
+  95%{
+    background-image: linear-gradient(to right, orange 10%, red 100%);
+    background-color: none;
+    color: white;
+  }
+
+  100%{
+    transform: translateX(84vw);
+    background-image: none;
+    background-color: red;
+    color: orange;
+  }
+}

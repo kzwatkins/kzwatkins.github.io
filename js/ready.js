@@ -6,6 +6,9 @@ const CREDS = {
   //  contentType : "application/json"
 };
 
+const NUM_HEAT_TICKS = 5;
+var index = 0;
+
 
 
 $(document).ready(function(){
@@ -20,6 +23,37 @@ $(document).ready(function(){
         menu(menuVisible);
         menuVisible = !menuVisible;
     });
+
+    $("#work4uindicator").hover(function(){
+      // $(this).css({"-webkit-animation-play-state" : "paused",
+      // "animation-play-state" : "paused"});
+        var position = getIndexPosition();
+        index = getWork4uMsg(position);
+
+    }, function(){
+      // $(this).css({"-webkit-animation-play-state" : "running",
+      // "animation-play-state" : "running"});
+      $(this).html("Click for Services!");
+    });
+
+
+    // $("#work4uindicator").mouseout(function(){
+    //     $("#work4umsg").text("Click for Services!");
+    // });
+    //
+
+    // $("#work4uindicator").click(function(){
+    //     var position = getGeoPosition();
+    //
+    //     if(!inUS(position)){
+    //       //Print error msg
+    //       return;
+    //     }
+    //
+    //     index = getWork4uMsg(position);
+    //     // var position = getIndexPosition();
+    //     // index = getWork4uMsg(position);
+    // });
 
     // $.post(GOOGLE_GEO_LOCATOR, CREDS, callback, 'json');
 
