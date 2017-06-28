@@ -23,7 +23,7 @@ $(document).ready(function(){
 
     // $.post(GOOGLE_GEO_LOCATOR, CREDS, callback, 'json');
 
-    var url = GOOGLE_GEO_LOCATOR;
+    // var url = GOOGLE_GEO_LOCATOR;
 
     // $.post(url, CREDS, callback);
 
@@ -35,30 +35,30 @@ $(document).ready(function(){
     //   alert(JSON.stringify(xhr));
     // }
 
-    $.ajax({
-      type: 'GET',
-
-      // The URL to make the request to.
-      url: 'http://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html',
-      contentType: 'text/plain',
-      xhrFields: {
-        withCredentials: false
-      },
-
-      headers: {
-        // Set any custom headers here.
-        // If you set any non-simple headers, your server must include these
-        // headers in the 'Access-Control-Allow-Headers' response header.
-      },
-
-      success: function() {
-        alert(status);
-      },
-
-      error: function() {
-        alert(status);
-      }
-    });
+    // $.ajax({
+    //   type: 'GET',
+    //
+    //   // The URL to make the request to.
+    //   url: 'http://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html',
+    //   contentType: 'text/plain',
+    //   xhrFields: {
+    //     withCredentials: false
+    //   },
+    //
+    //   headers: {
+    //     // Set any custom headers here.
+    //     // If you set any non-simple headers, your server must include these
+    //     // headers in the 'Access-Control-Allow-Headers' response header.
+    //   },
+    //
+    //   success: function() {
+    //     alert(status);
+    //   },
+    //
+    //   error: function() {
+    //     alert(status);
+    //   }
+    // });
 
     // var ip = getHostIP();
     // var country = getCountry(ip);
@@ -176,24 +176,3 @@ function addHeaders(xhr, headers){
 function addParams(xhr, params){
   xhr.send("&key=" + KEY);
 }
-
-// $.ajax({
-//   type: 'POST',
-//
-//   // The URL to make the request to.
-//   url: 'http://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html',
-//   contentType: 'application/json; charset=UTF-8',
-//
-//   xhrFields: {
-//     withCredentials: false
-//   },
-//
-//   headers: {
-//   },
-//
-//   success: function() {
-//   },
-//
-//   error: function() {
-//   }
-// });

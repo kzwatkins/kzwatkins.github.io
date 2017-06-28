@@ -328,7 +328,7 @@ header{
 }
 
 .work4u {
-  background-color: brown;
+  background-color: DimGrey;
   height: 4em;
   border-radius: 10px 10px 10px 10px;
   width: auto 80%;
@@ -341,10 +341,10 @@ header{
   background-color: blue;
   height: 5em;
   margin-top: -0.5em;
-  width: 2em;
+  width: 6em;
   display: inline;
   float: left;
-  animation: workMeterBar 2s 75ms infinite linear alternate;
+  animation: workMeterBar 2s 150ms 4 linear alternate;
 }
 
 
@@ -353,12 +353,24 @@ header{
     transform: translate(0.5rem);
   }
 
+  25%{
+    background-image: linear-gradient(to right, blue 50%, orange 100%);
+    background-color: none;
+  }
+
   50%{
-    background-image: linear-gradient(to right, blue 20%, orange 60%);
+    background-color: orange;
+    background-image: none;
+  }
+
+  75%{
+    background-image: linear-gradient(to right, orange 50%, red 100%);
+    background-color: none;
   }
 
   100%{
-    transform: translate(82rem);
-    background-image: linear-gradient(to right, orange 60%, red 100%);
+    transform: translate(79rem);
+    background-image: none;
+    background-color: red;
   }
 }
