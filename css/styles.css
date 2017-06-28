@@ -328,16 +328,17 @@ header{
 }
 
 .work4u {
+  background-color: brown;
   height: 4em;
   border-radius: 10px 10px 10px 10px;
   width: auto 80%;
-  background-image: linear-gradient(to right, blue 15%, orange 50%, red 85%);
   top: 26.5em;
   z-index: 15;
 }
 
 .work4uindicator {
-  background-color: brown;
+  /*background-image: linear-gradient(to right, blue 15%, orange 50%, red 85%);*/
+  background-color: blue;
   height: 5em;
   margin-top: -0.5em;
   width: 2em;
@@ -351,7 +352,13 @@ header{
   0%{
     transform: translate(0.5rem);
   }
+
+  50%{
+    background-image: linear-gradient(to right, blue 20%, orange 60%);
+  }
+
   100%{
     transform: translate(82rem);
+    background-image: linear-gradient(to right, orange 60%, red 100%);
   }
 }
