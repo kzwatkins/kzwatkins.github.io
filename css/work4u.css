@@ -18,10 +18,6 @@
   animation: workMeterBar 7s 150ms infinite linear alternate;
 }
 
-/*#work4uindicator:not(:hover){
-  content: "Click for Services!";
-}*/
-
 #work4uindicator:hover{
   -webkit-animation-play-state : paused;
   animation-play-state : paused;
