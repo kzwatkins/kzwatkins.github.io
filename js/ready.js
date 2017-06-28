@@ -33,7 +33,7 @@ $(document).ready(function(){
     }, function(){
       // $(this).css({"-webkit-animation-play-state" : "running",
       // "animation-play-state" : "running"});
-      $(this).html("Click for Services!");
+      $(this).html("Hover for Work Environments based on Distance!");
     });
 
 

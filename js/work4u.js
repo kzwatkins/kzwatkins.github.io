@@ -1,12 +1,11 @@
 function getWork4uMsg(position) {
-  $("#work4uindicator").html("<h3>" +insertWork4uMsg(position)+ "</h3>");
+  $("#work4uindicator").html(insertWork4uMsg(position));
   return (index + 1) % NUM_HEAT_TICKS;
 }
 
 function insertWork4uMsg(position){
   var left = position.left;
   var width = $(".work4u:first").width();
-  alert(width);
   var offset = 20;
 
   if(left < 0.25 * width + offset){

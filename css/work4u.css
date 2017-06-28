@@ -9,10 +9,11 @@
 
 #work4uindicator {
   background-color: blue;
-  position: relative;
+  /*position: relative;*/
   height: 5em;
   margin-top: -0.5em;
-  width: 8em;
+  width: 10em;
+  text-align: center;
   /*display: inline;
   float: left;*/
   animation: workMeterBar 7s 150ms infinite linear alternate;
@@ -272,7 +273,7 @@
   }
 
   100%{
-    transform: translateX(84vw);
+    transform: translateX(82vw);
     background-image: none;
     background-color: red;
     color: orange;
