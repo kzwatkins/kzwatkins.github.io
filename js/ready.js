@@ -1,6 +1,6 @@
 const GEO_LOCATOR = 'http://www.geoplugin.net/php.gp?ip=';
 const GOOGLE_GEO_LOCATOR = "https://maps.googleapis.com/maps/api/js";
-const KEY = "AIzaSyCOjGi_6QfMOMkLo2uLlHzqb9dw7K0uhmo";
+const KEY = "AIzaSyCVBAcVZ2W6B945Of8-KtvvH6P8TLN7wj4";
 const CREDS = {
   key : KEY,
   //  contentType : "application/json"
