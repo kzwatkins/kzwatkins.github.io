@@ -1,5 +1,7 @@
+const IP_LOCATOR = 'http://jsonip.com/?callback=?';
 const GEO_LOCATOR = 'http://www.geoplugin.net/php.gp?ip=';
 const GOOGLE_GEO_LOCATOR = "https://maps.googleapis.com/maps/api/js";
+const LATLNG_LOCATOR_BASED_ON_IP = 'freegeoip.net/json/';
 const KEY = "AIzaSyCVBAcVZ2W6B945Of8-KtvvH6P8TLN7wj4";
 const CREDS = {
   key : KEY,
@@ -30,85 +32,29 @@ $(document).ready(function(){
         var position = getIndexPosition();
         index = getWork4uMsg(position);
 
+        var location = getLocation();
+
     }, function(){
       // $(this).css({"-webkit-animation-play-state" : "running",
       // "animation-play-state" : "running"});
       $(this).html("Hover for Work Environments based on Distance!");
     });
 
-
-    // $("#work4uindicator").mouseout(function(){
-    //     $("#work4umsg").text("Click for Services!");
-    // });
-    //
-
-    // $("#work4uindicator").click(function(){
-    //     var position = getGeoPosition();
-    //
-    //     if(!inUS(position)){
-    //       //Print error msg
-    //       return;
-    //     }
-    //
-    //     index = getWork4uMsg(position);
-    //     // var position = getIndexPosition();
-    //     // index = getWork4uMsg(position);
-    // });
-
-    // $.post(GOOGLE_GEO_LOCATOR, CREDS, callback, 'json');
-
-    // var url = GOOGLE_GEO_LOCATOR;
-
-    // $.post(url, CREDS, callback);
-
-    // var xhr = createCORSRequest('POST', url);
-    // if (!xhr) {
-    //   throw new Error('CORS not supported');
-    // }
-    // else{
-    //   alert(JSON.stringify(xhr));
-    // }
-
-    // $.ajax({
-    //   type: 'GET',
-    //
-    //   // The URL to make the request to.
-    //   url: 'http://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html',
-    //   contentType: 'text/plain',
-    //   xhrFields: {
-    //     withCredentials: false
-    //   },
-    //
-    //   headers: {
-    //     // Set any custom headers here.
-    //     // If you set any non-simple headers, your server must include these
-    //     // headers in the 'Access-Control-Allow-Headers' response header.
-    //   },
-    //
-    //   success: function() {
-    //     alert(status);
-    //   },
-    //
-    //   error: function() {
-    //     alert(status);
-    //   }
-    // });
-
-    // var ip = getHostIP();
-    // var country = getCountry(ip);
-    //
-    // if(country != "NON_US"){
-    //    var ipType = getIPType(ip);        var discount = getDiscountType(ipType);
-    // }
-    // else{
-    //   $("#country").html("Thank you for your interest, but I only work for companies in the USA.");
-    // }
-
 });
 
 function callback(data, status){
   alert(status);
 }
+
+function getLocation(){
+  // 1) get ip
+  var ip = getHostIP();
+
+  // 2) estimate location based on ip
+
+  // 3) get lat & lng based on location
+}
+
 
 // (Ultra!) Adapted from https:// stackoverflow.com/questions/24259016/responsive-menu-show-and-hide-on-click
 // If the menu is hiding, then show it.
@@ -140,7 +86,7 @@ function showMenuOrg (){
 
 // Modified from https://stackoverflow.com/questions/19953328/how-to-get-ip-address-using-javascript-or-jquery
   function getHostIP() {
-      $.getJSON("http://jsonip.com/?callback=?", function (data) {
+      $.getJSON(IP_LOCATOR, function (data) {
           return data.ip;
           // alert(JSON.stringify(data));
       });
@@ -152,21 +98,22 @@ function showMenuOrg (){
     // INDIVIDUAL (25% + Tutorial), VETERAN (30% + Tutorial)
     var pos;
 
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        pos = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        };
-      }, function() {
-
+    // if (navigator.geolocation) {
+    //   navigator.geolocation.getCurrentPosition(function(position) {
+    //     pos = {
+    //       lat: position.coords.latitude,
+    //       lng: position.coords.longitude
+    //     };
+    //   }, function() {
+    //
+    //   });
+    // } else {
+      $.getJSON(GEO_LOCATOR, function (data) {
+          alert(JSON.stringify(data));
       });
-    } else {
-      // Browser doesn't support Geolocation
+    // }
 
-    }
-
-    alert(pos);
+    return(pos);
   }
 
   function getCountry(ip){
