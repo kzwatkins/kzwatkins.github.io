@@ -47,12 +47,15 @@ function callback(data, status){
 }
 
 function getLocation(){
+  //0) my location
+
   // 1) get ip
   var ip = getHostIP();
 
   // 2) estimate location based on ip
+  var latLng = getGeo(ip);
+  alert(JSON.stringify(latLng));
 
-  // 3) get lat & lng based on location
 }
 
 
@@ -108,8 +111,8 @@ function showMenuOrg (){
     //
     //   });
     // } else {
-      $.getJSON(GEO_LOCATOR, function (data) {
-          alert(JSON.stringify(data));
+      $.getJSON(LATLNG_LOCATOR_BASED_ON_IP, function (data) {
+        pos = data;
       });
     // }
 
