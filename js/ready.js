@@ -123,14 +123,18 @@ function showMenuOrg (){
     //   });
     // } else {
       $.getJSON(LATLNG_LOCATOR_BASED_ON_IP + ip, function (data) {
-        pos = {};
         var countryCode = data.country_code;
+        if(countryCode != "US"){
+          alert("Sorry, I only work for people in the US");
+          return null;
+        }
+
+        pos = {};
         pos.lat = data.latitude;
         pos.lng = data.longitude;
         pos.city = data.city;
         pos.state = data.region_code;
         pos.zip = data.zip_code;
-        alert(JSON.stringify(data));
         alert(JSON.stringify(pos));
       });
     // }
