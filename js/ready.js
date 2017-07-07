@@ -180,7 +180,7 @@ function showMenuOrg (){
     var docWidth = $(document).width();
 
     var work4uPos = $("#work4uindicator").position();
-    alert(JSON.stringify(work4uPos));
+    // alert(JSON.stringify(work4uPos));
     // var work4uPosLeft = work4uPos.left;
     // var work4uPosTop = work4uPos.top;
     // $("body").append("<div id='distanceMsg'></div>");
@@ -193,10 +193,10 @@ function showMenuOrg (){
           'opacity' : 0.4,
           'float' : 'left',
           'position' : 'absolute',
-          'display' : 'inline-block',
+          'display' : 'inline',
           'color' : 'black',
-          'top' : "'" + (work4uPos.top - docHeight/2.0) + "'",
-          'left' : "'" + (work4uPos.left + docHeight/2.0) + "'",
+          'top' : "'" + (work4uPos.top - docHeight/8.0) + "'",
+          'left' : "'" + (work4uPos.left + docHeight/8.0) + "'",
           'background-color' : 'pink',
           'width' : "'" + docHeight/8.0 + "'",
           'height' : "'" + docHeight/8.0 + "'",
