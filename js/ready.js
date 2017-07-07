@@ -1,7 +1,12 @@
 const IP_LOCATOR = 'https://jsonip.com/?callback=?';
-const GEO_LOCATOR = 'http://www.geoplugin.net/php.gp?ip=';
+const GEO_LOCATOR = 'https://www.geoplugin.net/php.gp?ip=';
 const GOOGLE_GEO_LOCATOR = "https://maps.googleapis.com/maps/api/js";
-const LATLNG_LOCATOR_BASED_ON_IP = 'http://freegeoip.net/json/';
+const LATLNG_LOCATOR_BASED_ON_IP = 'https://freegeoip.net/json/';
+// const LATLNG_LOCATOR_BASED_ON_IP = 'http://nominatim.openstreetmap.org/search';
+const COUNTRY_LOCATOR_BASED_ON_LAT_LNG_PARAMS = '?format=json&addressdetails=1&limit=1&polygon_svg=1&q=';
+const COUNTRY_LOCATOR_BASED_ON_LAT_LNG = 'http://nominatim.openstreetmap.org/search';
+const DAYTON_CENTER = {lat: 39.7589, lng: -84.1916};
+
 const KEY = "AIzaSyCVBAcVZ2W6B945Of8-KtvvH6P8TLN7wj4";
 const CREDS = {
   key : KEY,
@@ -118,14 +123,25 @@ function showMenuOrg (){
     //       lat: position.coords.latitude,
     //       lng: position.coords.longitude
     //     };
+    //
+    //     // if(!countryIsUS(pos)){
+    //     //   alert("Sorry, I only work for people in the US");
+    //     //   return null;
+    //     // }
+    //
+    //     alert(JSON.stringify(pos));
     //   }, function() {
     //
     //   });
     // } else {
+
+      // ip = "92.222.91.242";
       $.getJSON(LATLNG_LOCATOR_BASED_ON_IP + ip, function (data) {
         var countryCode = data.country_code;
+        alert("countryCode: " + countryCode);
+
         if(countryCode != "US"){
-          alert("Sorry, I only work for people in the US");
+          alert("Country code was not US. Sorry, I only work for people in the US");
           return null;
         }
 
@@ -135,11 +151,44 @@ function showMenuOrg (){
         pos.city = data.city;
         pos.state = data.region_code;
         pos.zip = data.zip_code;
-        alert(JSON.stringify(pos));
+
+        checkDistance(pos);
       });
     // }
+    //
+    // return(pos);
+  }
 
-    return(pos);
+  function checkDistance(pos){
+    var distance = getDistanceFromLatLon(DAYTON_CENTER, pos);
+    alert(JSON.stringify(pos) + ", distance: " + distance);
+
+    if(distance <= 75){
+      alert("You're in my neighborhood. Let's discuss your business needs over coffee.");
+    } else if(distance <= 100){
+      alert("You're not far. Let's have a Skype meeting about your business needs");
+    } else if(distance <= 200){
+      alert("Let's have a Skype meeting about meeting intermittently.");
+    } else {
+      alert("We're a bit far from each other. Do you allow remote work?");
+    }
+  }
+
+  function countryIsUS(pos){
+    var lat = pos.lat;
+    var lng = pos.lng;
+    var isUS = true;
+
+    $.getJSON(COUNTRY_LOCATOR_BASED_ON_LAT_LNG + COUNTRY_LOCATOR_BASED_ON_LAT_LNG_PARAMS + lat + "," + lng, function (data) {
+      var countryCode = data.country_code;
+
+      if(countryCode != "US"){
+        alert("Sorry, I only work for people in the US");
+        isUS = false;
+      }
+
+      return true;
+    });
   }
 
   function getCountry(ip){
