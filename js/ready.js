@@ -186,23 +186,25 @@ function showMenuOrg (){
     // $("body").append("<div id='distanceMsg'></div>");
 
     $("#distanceMsg")
-      .height(docHeight/4.0)
-      .width(docHeight/4.0)
+      .height(docHeight/16.0)
+      .width(docHeight/8.0)
       .text(msg)
       .css({
-          'opacity' : 0.4,
+          'opacity' : 0.8,
           'float' : 'left',
           'position' : 'absolute',
           'display' : 'inline',
-          'color' : 'black',
+          'color' : 'white',
           'top' : "'" + (work4uPos.top - docHeight/8.0) + "'",
           'left' : "'" + (work4uPos.left + docHeight/8.0) + "'",
-          'background-color' : 'pink',
+          'background-color' : 'rgba(24, 20, 109, 0.4)',
           'width' : "'" + docHeight/8.0 + "'",
           'height' : "'" + docHeight/8.0 + "'",
           'z-index' : 7000,
           'text-align' : 'center',
-          'margin-top' : '25%',
+          'padding-left' : '5%',
+          'padding-right' : '5%',
+          'padding-top' : '2.5%',
           'border-radius' : '50%'
         });
   }
