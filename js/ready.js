@@ -36,29 +36,14 @@ $(document).ready(function(){
         index = getWork4uMsg(position);
 
         var location = getLocation();
-        $("#displayMsg").fadeIn();
-        // overlay(true);
 
     }, function(){
       // $(this).css({"-webkit-animation-play-state" : "running",
       // "animation-play-state" : "running"});
       $(this).html("Hover for Work Environments based on Distance!");
-      // overlay(false);
-      $("#displayMsg").fadeOut();
-
     });
+
 });
-
-function overlay(overlayVisible) {
-
-    if (overlayVisible) {
-      $('#displayMsg').css({'display':'inline-block'});
-    }
-    else{
-      $('#displayMsg').css({'display':'none'});
-    }
-}
-
 
 function callback(data, status){
   //alert(status);
@@ -153,7 +138,7 @@ function showMenuOrg (){
       // ip = "92.222.91.242";
       $.getJSON(LATLNG_LOCATOR_BASED_ON_IP + ip, function (data) {
         var countryCode = data.country_code;
-        // alert("countryCode: " + countryCode);
+        alert("countryCode: " + countryCode);
 
         if(countryCode != "US"){
           alert("Country code was not US. Sorry, I only work for people in the US");
@@ -167,58 +152,25 @@ function showMenuOrg (){
         pos.state = data.region_code;
         pos.zip = data.zip_code;
 
-        var distanceMsg = getDistanceMsg(pos);
-        showOverlay(distanceMsg);
+        checkDistance(pos);
       });
     // }
     //
     // return(pos);
   }
 
-  function showOverlay(msg){
-    var docHeight = $(document).height();
-    var docWidth = $(document).width();
-
-    var work4uPos = $("#work4uindicator").position();
-    alert(JSON.stringify(work4uPos));
-    // var work4uPosLeft = work4uPos.left;
-    // var work4uPosTop = work4uPos.top;
-    // $("body").append("<div id='distanceMsg'></div>");
-
-    $("#distanceMsg")
-      .height(docHeight/4.0)
-      .width(docHeight/4.0)
-      .text(msg)
-      .css({
-          'opacity' : 0.4,
-          'float' : 'left',
-          'position' : 'absolute',
-          'display' : 'inline-block',
-          'color' : 'black',
-          'top' : "'" + (work4uPos.top - docHeight/2.0) + "'",
-          'left' : "'" + (work4uPos.left + docHeight/2.0) + "'",
-          'background-color' : 'pink',
-          'width' : "'" + docHeight/8.0 + "'",
-          'height' : "'" + docHeight/8.0 + "'",
-          'z-index' : 7000,
-          'text-align' : 'center',
-          'margin-top' : '25%',
-          'border-radius' : '50%'
-        });
-  }
-
-  function getDistanceMsg(pos){
+  function checkDistance(pos){
     var distance = getDistanceFromLatLon(DAYTON_CENTER, pos);
-    // alert(JSON.stringify(pos) + ", distance: " + distance);
+    alert(JSON.stringify(pos) + ", distance: " + distance);
 
     if(distance <= 75){
-      return("You're in my neighborhood. Let's discuss your business needs over coffee.");
+      alert("You're in my neighborhood. Let's discuss your business needs over coffee.");
     } else if(distance <= 100){
-      return("You're not far. Let's have a Skype meeting about your business needs");
+      alert("You're not far. Let's have a Skype meeting about your business needs");
     } else if(distance <= 200){
-      return("Let's have a Skype meeting about meeting intermittently.");
+      alert("Let's have a Skype meeting about meeting intermittently.");
     } else {
-      return("We're a bit far from each other. Let's talk remote work!");
+      alert("We're a bit far from each other. Do you allow remote work?");
     }
   }
 
