@@ -2,6 +2,16 @@ const IP_LOCATOR = 'https://jsonip.com/?callback=?';
 const GEO_LOCATOR = 'http://www.geoplugin.net/php.gp?ip=';
 const GOOGLE_GEO_LOCATOR = "https://maps.googleapis.com/maps/api/js";
 const LATLNG_LOCATOR_BASED_ON_IP = 'http://freegeoip.net/json/';
+const LATLNG_LOCATOR_BASED_ON_IP = 'https://freegeoip.net/json/';
+// const LATLNG_LOCATOR_BASED_ON_IP = 'http://nominatim.openstreetmap.org/search';
+const COUNTRY_LOCATOR_BASED_ON_LAT_LNG_PARAMS = '?format=json&addressdetails=1&limit=1&polygon_svg=1&q=';
+const COUNTRY_LOCATOR_BASED_ON_LAT_LNG = 'http://nominatim.openstreetmap.org/search';
+const DAYTON_CENTER = {lat: 39.7589, lng: -84.1916};
+
+const IP_LOCATOR = 'http://jsonip.com/?callback=?';
+const GEO_LOCATOR = 'http://www.geoplugin.net/php.gp?ip=';
+const GOOGLE_GEO_LOCATOR = "https://maps.googleapis.com/maps/api/js";
+const LATLNG_LOCATOR_BASED_ON_IP = 'freegeoip.net/json/';
 const KEY = "AIzaSyCVBAcVZ2W6B945Of8-KtvvH6P8TLN7wj4";
 const CREDS = {
   key : KEY,
@@ -41,7 +51,7 @@ $(document).ready(function(){
 });
 
 function callback(data, status){
-  //alert(status);
+  alert(status);
 }
 
 function getLocation(){
@@ -49,11 +59,10 @@ function getLocation(){
 
   // 1) get ip
   var ip = getHostIP();
-  // alert("ip: " + ip);
 
   // 2) estimate location based on ip
-  // var latLng = getGeo(ip);
-  // alert("latlng: " + JSON.stringify(latLng));
+  var latLng = getGeo(ip);
+  alert(JSON.stringify(latLng));
 
 }
 
@@ -88,25 +97,13 @@ function showMenuOrg (){
 
 // Modified from https://stackoverflow.com/questions/19953328/how-to-get-ip-address-using-javascript-or-jquery
   function getHostIP() {
-    var ip = null;
-
       $.getJSON(IP_LOCATOR, function (data) {
-          // alert("getHostIP data: " + JSON.stringify(data));
-          ip = data.ip;
-
-          // 2) estimate location based on ip
-          // var latLng = getGeo(ip);
-          // alert("latlng: " + JSON.stringify(latLng));
-
-          var latLng = getGeo(ip);
+          return data.ip;
+          // alert(JSON.stringify(data));
       });
-
-    return ip;
   }
 
   function getGeo(ip){
-    if(ip == "undefined") return null;
-
     // INDUSTRY (5%), GOV (7.5%), RESEARCH_LAB (10%),
     // NON_PROFIT (15% + Tutorial), SKULE (20% + Tutorial),
     // INDIVIDUAL (25% + Tutorial), VETERAN (30% + Tutorial)
@@ -122,6 +119,8 @@ function showMenuOrg (){
     //
     //   });
     // } else {
+
+      // ip = "92.222.91.242";
       $.getJSON(LATLNG_LOCATOR_BASED_ON_IP + ip, function (data) {
         var countryCode = data.country_code;
         if(countryCode != "US"){
@@ -136,6 +135,11 @@ function showMenuOrg (){
         pos.state = data.region_code;
         pos.zip = data.zip_code;
         alert(JSON.stringify(pos));
+
+        var distanceMsg = getDistanceMsg(pos);
+        showOverlay(distanceMsg);
+      $.getJSON(LATLNG_LOCATOR_BASED_ON_IP, function (data) {
+        pos = data;
       });
     // }
 
