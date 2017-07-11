@@ -6,11 +6,6 @@ const LATLNG_LOCATOR_BASED_ON_IP = 'https://freegeoip.net/json/';
 const COUNTRY_LOCATOR_BASED_ON_LAT_LNG_PARAMS = '?format=json&addressdetails=1&limit=1&polygon_svg=1&q=';
 const COUNTRY_LOCATOR_BASED_ON_LAT_LNG = 'http://nominatim.openstreetmap.org/search';
 const DAYTON_CENTER = {lat: 39.7589, lng: -84.1916};
-
-const IP_LOCATOR = 'http://jsonip.com/?callback=?';
-const GEO_LOCATOR = 'http://www.geoplugin.net/php.gp?ip=';
-const GOOGLE_GEO_LOCATOR = "https://maps.googleapis.com/maps/api/js";
-const LATLNG_LOCATOR_BASED_ON_IP = 'freegeoip.net/json/';
 const KEY = "AIzaSyCVBAcVZ2W6B945Of8-KtvvH6P8TLN7wj4";
 const CREDS = {
   key : KEY,
