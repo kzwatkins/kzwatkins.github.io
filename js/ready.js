@@ -34,7 +34,7 @@ $(document).ready(function(){
         var position = getIndexPosition();
         index = getWork4uMsg(position);
 
-        var location = getLocation();
+        // var location = getLocation();
 
     }, function(){
       // $(this).css({"-webkit-animation-play-state" : "running",
@@ -135,9 +135,9 @@ function showMenuOrg (){
       $.getJSON(LATLNG_LOCATOR_BASED_ON_IP, function (data) {
         pos = data;
       });
-    // }
+    });
 
-    return(pos);
+    // return(pos);
   }
 
   function getCountry(ip){
