@@ -1,7 +1,6 @@
 const IP_LOCATOR = 'https://jsonip.com/?callback=?';
 const GEO_LOCATOR = 'http://www.geoplugin.net/php.gp?ip=';
 const GOOGLE_GEO_LOCATOR = "https://maps.googleapis.com/maps/api/js";
-const LATLNG_LOCATOR_BASED_ON_IP = 'http://freegeoip.net/json/';
 const LATLNG_LOCATOR_BASED_ON_IP = 'https://freegeoip.net/json/';
 // const LATLNG_LOCATOR_BASED_ON_IP = 'http://nominatim.openstreetmap.org/search';
 const COUNTRY_LOCATOR_BASED_ON_LAT_LNG_PARAMS = '?format=json&addressdetails=1&limit=1&polygon_svg=1&q=';
