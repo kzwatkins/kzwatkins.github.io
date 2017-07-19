@@ -161,7 +161,7 @@ header{
 }
 
 .hero{
-  display: block;
+  display: inline-block;
   background: linear-gradient(to right, rgba(24, 20, 109, 0), rgba(24, 20, 109, 0.6), rgba(24, 20, 109, 1)),
       url('../images/binaryFuzzy.jpeg') no-repeat top center;
   height: 22em;
