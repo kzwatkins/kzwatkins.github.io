@@ -3,6 +3,7 @@ html {
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
   overflow-x: hidden;
+  overflow-y: hidden;
   width: 100%;
   height: 100%;
 }
@@ -14,6 +15,6 @@ body {
 }
 
 #cookout{
-  width: 100%;
   height: 100%;
+  width: auto;
 }
