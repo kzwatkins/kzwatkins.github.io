@@ -17,6 +17,9 @@ body {
 }
 
 #cookout{
+  margin: auto;
+  padding: 5px;
+  display: block;
   height: 100%;
   width: auto;
 }
