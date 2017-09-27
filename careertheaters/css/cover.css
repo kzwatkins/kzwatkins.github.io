@@ -136,14 +136,12 @@ body {
   font-weight: bold;
 }
 
-
 /*
  * Footer
  */
 
 .mastfoot {
-  /*color: rgba(255,255,255,.5);*/
-  color: #282828;
+  color: rgba(0, 0, 0,.8);
 }
 
 
