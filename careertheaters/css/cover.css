@@ -47,7 +47,7 @@ body {
   left: 0;
   background-image: url("../images/careertheaters-icon.png");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: left top;
   background-attachment: fixed;
   width: 95%;
   height: 100%;
@@ -142,7 +142,8 @@ body {
  */
 
 .mastfoot {
-  color: rgba(255,255,255,.5);
+  /*color: rgba(255,255,255,.5);*/
+  color: #282828;
 }
 
 
