@@ -37,7 +37,6 @@ body {
 
 .main{
   position: relative;
-  top:5em;
 }
 
 .main:after{
