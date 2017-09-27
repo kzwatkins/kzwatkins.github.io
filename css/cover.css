@@ -36,10 +36,11 @@ body {
 }
 
 .main{
-  background-image: url("images/careertheaters-icon.png");
+  /* background-image: url("images/careertheaters-icon.png");
   background-repeat: no-repeat;
   background-position: right top;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+  background: #d3d3d3 url("images/careertheaters-icon.png") no-repeat right top;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
