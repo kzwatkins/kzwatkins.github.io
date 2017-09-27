@@ -39,7 +39,7 @@ body {
   position: relative;
 }
 
-.main::after{
+.main:after{
   content : "";
   display: block;
   position: absolute;
