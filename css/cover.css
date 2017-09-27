@@ -30,13 +30,16 @@ body {
 }
 
 body {
+  color: #d3d3d3; /* #fff; */
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+}
+
+.main{
   background-image: url("images/careertheaters-icon.png");
   background-repeat: no-repeat;
   background-position: right top;
   background-attachment: fixed;
-  color: #d3d3d3; /* #fff; */
-  text-align: center;
-  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
