@@ -27,7 +27,6 @@ a:hover {
 html,
 body {
   background-color: #f8f8f8;
-  margin-top: 5em;
 }
 
 body {
@@ -44,7 +43,7 @@ body {
   content : "";
   display: block;
   position: absolute;
-  top: 0;
+  top: 5em;
   left: 0;
   background-image: url("../images/careertheaters-icon.png");
   background-repeat: no-repeat;
