@@ -36,6 +36,10 @@ body {
 }
 
 .main{
+  position: relative;
+}
+
+.main::after{
   content : "";
   display: block;
   position: absolute;
@@ -51,9 +55,6 @@ body {
   z-index: -1;
 }
 
-.main::before{
-  position: relative;
-}
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
