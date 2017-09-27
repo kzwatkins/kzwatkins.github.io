@@ -26,11 +26,11 @@ a:hover {
 
 html,
 body {
-  background-color: #d3d3d3;
+  background-color: #f8f8f8;
 }
 
 body {
-  color: #d3d3d3; /* #fff; */
+  color: #f8f8f8; /* #fff; */
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 }
@@ -40,7 +40,7 @@ body {
   background-repeat: no-repeat;
   background-position: right top;
   background-attachment: fixed; */
-  background: #d3d3d3 url("images/careertheaters-icon.png") no-repeat right top;
+  background: #f8f8f8 url("images/careertheaters-icon.png") no-repeat right top;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
