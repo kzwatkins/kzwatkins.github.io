@@ -152,12 +152,12 @@ header{
 
 .brand{
   float:left;
-  /*box-sizing: border-box;*/
-  background: url('../images/kzw_brand.png') no-repeat top center;
+  /* box-sizing: border-box; */
+  /* background: url('../images/kzw_brand.png') no-repeat top center; */
   /*width: 5em;*/
   height: 3.5em;
-  background-size: contain;
-  color:transparent;
+  /* background-size: contain; */
+  /* color:transparent; */
 }
 
 .hero{
@@ -178,6 +178,10 @@ header{
 
 .hero h1{
   font-size: 2em;
+}
+
+.hero-text{
+  margin-right: 2em;
 }
 
 .centering{
